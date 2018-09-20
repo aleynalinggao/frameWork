@@ -1,0 +1,77 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>nav 1</li>
+      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item>nav 3</li>
+    </ul>
+  </nz-header>
+  <nz-layout>
+    <nz-sider [nzWidth]="200" style="background:#fff">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%">
+        <li nz-submenu>
+          <span title [routerLink]="['/dashboard']"><i class="anticon anticon-user"></i>Dashboard</span>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-user"></i>General</span>
+          <ul>
+            <li nz-menu-item  [routerLink]="['/component/button']">Button</li>
+            <li nz-menu-item>Icon</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-laptop"></i>Layout</span>
+          <ul>
+            <li nz-menu-item>Grid</li>
+            <li nz-menu-item>Layout</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-notification"></i>Navigation</span>
+          <ul>
+            <li nz-menu-item>Affix</li>
+            <li nz-menu-item>Breadcrumb</li>
+            <li nz-menu-item>Dropdown</li>
+            <li nz-menu-item>Menu</li>
+            <li nz-menu-item>Pagination</li>
+            <li nz-menu-item>Steps</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-notification"></i>Navigation</span>
+          <ul>
+            <li nz-menu-item>Affix</li>
+            <li nz-menu-item>Breadcrumb</li>
+            <li nz-menu-item>Dropdown</li>
+            <li nz-menu-item>Menu</li>
+            <li nz-menu-item>Pagination</li>
+            <li nz-menu-item>Steps</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-notification"></i>Navigation</span>
+          <ul>
+            <li nz-menu-item>Affix</li>
+            <li nz-menu-item>Breadcrumb</li>
+            <li nz-menu-item>Dropdown</li>
+            <li nz-menu-item>Menu</li>
+            <li nz-menu-item>Pagination</li>
+            <li nz-menu-item>Steps</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout style="padding:0 24px 24px">
+      <nz-breadcrumb style="margin:16px 0;">
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <nz-content style="background:#fff; padding: 24px; min-height: 280px;">
+        <router-outlet> </router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

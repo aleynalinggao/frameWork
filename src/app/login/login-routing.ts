@@ -1,11 +1,11 @@
 
 import { Routes } from '@angular/router';
-import {DashboardComponent} from "./dashboard.component";
+import {LoginComponent} from "./login.component";
 
-export const DashboardRoutes: Routes = [{
+export const LogindRoutes: Routes = [{
   path: '',
   data: {
-    breadcrumb: 'Dashboard'
+    breadcrumb: 'Login'
   },
-  component: DashboardComponent
+  component: LoginComponent
 }];

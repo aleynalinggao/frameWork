@@ -1,0 +1,29 @@
+.login{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('../../assets/images/login/login_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box{
+    width: 300px;
+    height: 400px;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+}
+.login-form {
+  max-width: 300px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
