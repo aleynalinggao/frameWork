@@ -68,6 +68,7 @@ export class LoginComponent implements OnInit {
            alert(thiz.result.msg)
          }
       },(err) =>{
+        thiz.loading = false;
          console.log(err);
       });
     }

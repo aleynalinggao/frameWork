@@ -2,6 +2,7 @@
 import { Routes } from '@angular/router';
 import {ButtonComponent} from "./button/button.component";
 import {ComponentComponent} from "./component.component";
+import { TableComponent } from './table/table.component';
 
 
 export const ComponentRoutes: Routes = [
@@ -20,6 +21,13 @@ export const ComponentRoutes: Routes = [
         component: ButtonComponent,
         data: {
           breadcrumb: 'button',
+          status: true
+        }
+      },{
+        path: 'table',
+        component: TableComponent,
+        data: {
+          breadcrumb: 'table',
           status: true
         }
       }

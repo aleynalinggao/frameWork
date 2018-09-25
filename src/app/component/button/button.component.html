@@ -1,5 +1,144 @@
+
+<h3>按钮类型</h3>
+<p>按钮有四种类型：主按钮、次按钮、虚线按钮、危险按钮。主按钮在同一个操作区域最多出现一次。</p>
 <div nz-row>
-  <div nz-col [nzXs]="{ span: 5, offset: 2 }" [nzLg]="{ span: 6, offset: 2 }">
-    col-24
+  <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+    <button nz-button nzType="primary">Primary</button>
+    <button nz-button nzType="default">Default</button>
+    <button nz-button nzType="dashed">Dashed</button>
+    <button nz-button nzType="danger">Danger</button>
   </div>
 </div>
+<h3>图标按钮</h3>
+<p>当需要在 nz-button 内嵌入图标时，可以直接在 nz-button 内嵌入对应的 icon。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+        <button nz-button nzType="primary" nzShape="circle"><i class="anticon anticon-search"></i></button>
+        <button nz-button nzType="primary"><i class="anticon anticon-search"></i>Search</button>
+        <button nz-button nzType="default" nzShape="circle"><i class="anticon anticon-search"></i></button>
+        <button nz-button nzType="default"><i class="anticon anticon-search"></i>Search</button>
+        <button nz-button nzType="default" nzShape="circle"><i class="anticon anticon-search"></i></button>
+        <button nz-button nzType="default"><i class="anticon anticon-search"></i>Search</button>
+        <button nz-button nzType="dashed" nzShape="circle"><i class="anticon anticon-search"></i></button>
+        <button nz-button nzType="dashed"><i class="anticon anticon-search"></i>Search</button>
+      </div>
+</div>
+<h3>按钮尺寸</h3>
+<p>按钮有大、中、小三种尺寸。通过设置 nzSize 为 largesmall 分别把按钮设为大、小尺寸。若不设置 nzSize，则尺寸为中。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+        <nz-radio-group [(ngModel)]="size">
+            <label nz-radio-button nzValue="large">Large</label>
+            <label nz-radio-button nzValue="default">Default</label>
+            <label nz-radio-button nzValue="small">Small</label>
+          </nz-radio-group>
+          <br>
+          <br>
+          <button nz-button [nzSize]="size" nzType="primary">Primary</button>
+          <button nz-button [nzSize]="size" nzType="default">Default</button>
+          <button nz-button [nzSize]="size" nzType="dashed">Dashed</button>
+          <button nz-button [nzSize]="size" nzType="danger">Danger</button>
+          <button nz-button nzType="primary" [nzSize]="size" nzShape="circle"><i class="anticon anticon-download"></i>
+          </button>
+          <button nz-button nzType="primary" [nzSize]="size"><i class="anticon anticon-download"></i>Download</button>
+          <nz-button-group [nzSize]="size">
+            <button nz-button nzType="primary"><i class="anticon anticon-left"></i>Backward</button>
+            <button nz-button nzType="primary">Forward<i class="anticon anticon-right"></i></button>
+          </nz-button-group>
+      </div>
+</div>
+<h3>不可用状态</h3>
+<p>添加 disabled 属性即可让按钮处于不可用状态，同时按钮样式也会改变。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+            <button nz-button nzType="primary">Primary</button>
+            <button nz-button nzType="primary" disabled>Primary(disabled)</button>
+            <br>
+            <button nz-button nzType="default">Default</button>
+            <button nz-button nzType="default" disabled>Default(disabled)</button>
+            <br>
+            <button nz-button nzType="dashed">Dashed</button>
+            <button nz-button nzType="dashed" disabled>Dashed(disabled)</button>
+            <div style="padding: 8px 8px 0px; background: rgb(190, 200, 200);">
+              <button nz-button nzGhost>Ghost</button>
+              <button nz-button nzGhost disabled>Ghost(disabled)</button>
+            </div>
+      </div>
+</div>
+<h3>按钮组合</h3>
+<p>可以将多个 nz-button 放入 nz-button-group 的容器中。通过设置 nzSize 为 largesmall 分别把按钮组合设为大、小尺寸。若不设置 nzSize，则尺寸为中。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+            <h4>Basic</h4>
+            <nz-button-group>
+              <button nz-button>Cancel</button>
+              <button nz-button nzType="primary">OK</button>
+            </nz-button-group>
+            <nz-button-group>
+              <button nz-button nzType="default" disabled>L</button>
+              <button nz-button nzType="default" disabled>M</button>
+              <button nz-button nzType="default" disabled>R</button>
+            </nz-button-group>
+            <nz-button-group>
+              <button nz-button nzType="primary" disabled>L</button>
+              <button nz-button nzType="default" disabled>M</button>
+              <button nz-button nzType="default">M</button>
+              <button nz-button nzType="dashed" disabled>R</button>
+            </nz-button-group>
+            <h4>With Icon</h4>
+            <nz-button-group>
+              <button nz-button nzType="primary"><i class="anticon anticon-left"></i> Go back</button>
+              <button nz-button nzType="primary">Go forward<i class="anticon anticon-right"></i></button>
+            </nz-button-group>
+            <nz-button-group>
+              <button nz-button nzType="primary"><i class="anticon anticon-cloud"></i></button>
+              <button nz-button nzType="primary"><i class="anticon anticon-cloud-download"></i></button>
+            </nz-button-group>
+      </div>
+</div>
+<h3>Block 按钮</h3>
+<p>nzBlock 属性将使按钮适合其父宽度。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+            <button nz-button nzType="primary" nzBlock>Primary</button>
+            <button nz-button nzType="default" nzBlock>Default</button>
+            <button nz-button nzType="dashed" nzBlock>Dashed</button>
+            <button nz-button nzType="danger" nzBlock>Danger</button>
+      </div>
+</div>
+
+<h3>多个按钮组合</h3>
+<p>按钮组合使用时，推荐使用1个主操作 + n 个次操作，3个以上操作时把更多操作放到 nz-dropdown 中组合使用。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+            <button nz-button nzType="primary">primary</button>
+            <button nz-button nzType="default">secondary</button>
+            <nz-dropdown>
+              <button nz-button nz-dropdown>Actions<i class="anticon anticon-down"></i></button>
+              <ul nz-menu>
+                <li nz-menu-item>
+                  <a>1st item</a>
+                </li>
+                <li nz-menu-item>
+                  <a>2nd item</a>
+                </li>
+                <li nz-menu-item>
+                  <a>3rd item</a>
+                </li>
+              </ul>
+            </nz-dropdown>
+      </div>
+</div>
+<h3>幽灵按钮</h3>
+<p>添加 nzGhost 属性后，幽灵按钮将其他按钮的内容反色，背景变为透明，常用在有色背景上。</p>
+<div nz-row>
+    <div nz-col [nzXs]="{ span: 24}" [nzLg]="{ span: 24}">
+            <div style="background: rgb(190, 200, 200);padding: 26px 16px 16px;">
+                    <button nz-button nzType="primary" nzGhost>Primary</button>
+                    <button nz-button nzType="default" nzGhost>Default</button>
+                    <button nz-button nzType="dashed" nzGhost>Dashed</button>
+                    <button nz-button nzType="danger" nzGhost>Danger</button>
+                  </div>
+      </div>
+</div>
+
